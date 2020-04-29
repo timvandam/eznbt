@@ -43,10 +43,10 @@ myCompound.json // yields the compound as an object. children are JS types (numb
 Lists are special because they have one set type, which you will first have to pass to the `List` or `list` function.
 ```javascript
 import NBT from 'eznbt'
-const { List, list, String } = NBT
+const { List, list, NBTString } = NBT
 
 
-const myList = list(String)('hello', 'world!') // creates a string-list
+const myList = list(NBTString)('hello', 'world!') // creates a string-list
 
 // When the type of the list is unknown, it can only be used to read stuff:
 const { value } = new (List())({ buffer: myList.buffer })
