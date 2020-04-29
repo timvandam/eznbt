@@ -34,6 +34,7 @@ export abstract class NBTTag<T> {
   public value: T
   public buffer: Buffer
   public static id: ENBTTag
+  public json?: object
 
   constructor ({ value = undefined, buffer = undefined }: HasValue<T> | HasBuffer) {
     this.value = value ?? this.read(buffer as Buffer)
@@ -80,5 +81,6 @@ export default {
   Short,
   short,
   NBTString,
+  String: NBTString,
   string
 }
