@@ -1,5 +1,4 @@
 // These datatypes are for Java edition Minecraft - so big endian stuff
-import { ENBTTag } from './enums/ENBTTag'
 import { NBTString, string } from './DataTypes/String'
 import { ByteArray, bytearray } from './DataTypes/ByteArray'
 import { Float, float } from './DataTypes/Float'
