@@ -22,7 +22,9 @@ const myCompound = NBT.compound({
   // is equivalent to
   myStr2: NBT.String({ value: 'hello' }),
   // is equivalent to
-  myStr3: string('hello')
+  myStr3: string('hello'),
+  // is equivalent to
+  myStr4: 'hello'
 })
 
 myCompound.buffer // ready to send to your client/server
