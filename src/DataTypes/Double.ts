@@ -1,6 +1,6 @@
 // A 8 byte double
 import { ENBTTag } from '../enums/ENBTTag'
-import { NBTTag, types } from '../index'
+import { NBTTag, types } from './NBTTag'
 
 export class Double extends NBTTag<number> {
   public static id = ENBTTag.Double

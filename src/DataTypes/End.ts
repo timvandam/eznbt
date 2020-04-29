@@ -1,5 +1,5 @@
 import { ENBTTag } from '../enums/ENBTTag'
-import { NBTTag, types } from '../index'
+import { NBTTag, types } from './NBTTag'
 
 // The end tag has no data, only its id (0)
 // Used to indicate the end of Compound tags

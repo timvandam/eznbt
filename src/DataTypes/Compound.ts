@@ -1,7 +1,7 @@
 // Pretty much the NBT equivalent of an object
 // Hence you don't have to use this. Objects will automatically be converted to a compound
 import { ENBTTag } from '../enums/ENBTTag'
-import { NBTGenerator, NBTTag, NBTTagConstructor, types } from '../index'
+import { NBTGenerator, NBTTag, NBTTagConstructor, types } from './NBTTag'
 import { string } from './String'
 import { End } from './End'
 import { list } from './List'
@@ -71,9 +71,10 @@ export class Compound extends NBTTag<Record<string, NBTTag<any>>> {
     return result
   }
 
-  protected write (NBT: Record<string, any>): Buffer {
+  protected write (data: Record<string, any>): Buffer {
     // Convert all children into NBT tags
-    Object.entries(NBT).forEach(([key, value]) => {
+    const NBT: Record<string, any> = {}
+    Object.entries(data).forEach(([key, value]) => {
       NBT[key] = Compound.convertValue(value)
     })
 

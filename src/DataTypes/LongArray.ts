@@ -1,6 +1,6 @@
 // Array of Longs prefixed by its length (Int)
 import { ENBTTag } from '../enums/ENBTTag'
-import { NBTTag, types } from '../index'
+import { NBTTag, types } from './NBTTag'
 import { Int, int } from './Int'
 import { Long, long } from './Long'
 

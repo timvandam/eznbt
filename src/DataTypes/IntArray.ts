@@ -1,6 +1,6 @@
 // Array of Ints prefixed by an Int indicating its length
 import { ENBTTag } from '../enums/ENBTTag'
-import { NBTTag, types } from '../index'
+import { NBTTag, types } from './NBTTag'
 import { Int, int } from './Int'
 
 export class IntArray extends NBTTag<number[]> {

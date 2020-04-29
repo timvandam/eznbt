@@ -1,6 +1,6 @@
 // A 8 bit long
 import { ENBTTag } from '../enums/ENBTTag'
-import { NBTTag, types } from '../index'
+import { NBTTag, types } from './NBTTag'
 
 export class Long extends NBTTag<bigint> {
   public static id = ENBTTag.Long

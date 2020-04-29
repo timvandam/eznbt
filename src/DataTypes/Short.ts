@@ -1,6 +1,6 @@
 // A 2-byte signed short
 import { ENBTTag } from '../enums/ENBTTag'
-import { NBTTag, types } from '../index'
+import { NBTTag, types } from './NBTTag'
 
 export class Short extends NBTTag<number> {
   public static id = ENBTTag.Short

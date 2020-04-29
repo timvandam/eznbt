@@ -1,6 +1,6 @@
 // A 4 byte int
 import { ENBTTag } from '../enums/ENBTTag'
-import { NBTTag, types } from '../index'
+import { NBTTag, types } from './NBTTag'
 
 export class Int extends NBTTag<number> {
   public static id = ENBTTag.Int

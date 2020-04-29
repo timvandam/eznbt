@@ -1,6 +1,6 @@
 // An array of bytes prefixed by its length
 import { ENBTTag } from '../enums/ENBTTag'
-import { NBTTag, types } from '../index'
+import { NBTTag, types } from './NBTTag'
 import { Int, int } from './Int'
 import { byte, Byte } from './Byte'
 

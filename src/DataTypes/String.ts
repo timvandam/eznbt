@@ -1,7 +1,7 @@
 // A utf-8 string prefixed by its length (as an unsigned short)
 // This never has to be used directly - string are automatically converted
 import { ENBTTag } from '../enums/ENBTTag'
-import { NBTTag, types } from '../index'
+import { NBTTag, types } from './NBTTag'
 
 export class NBTString extends NBTTag<string> {
   public static id = ENBTTag.String

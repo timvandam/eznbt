@@ -1,9 +1,13 @@
 # eznbt
 Easy Minecraft NBT reading and writing
 
+## Prerequisites
+Make sure to use a node version that supports BigInts, they're used for the Long NBT Tag
+
 ## Usage
 ```javascript
-const NBT = require('eznbt')
+import NBT from 'eznbt'
+// const NBT = require('eznbt').default
 
 // The NBT object contains both classes and constructors.
 // Classes are PascalCased and can be used to both read and write:
@@ -46,3 +50,7 @@ myCompound.json
   bigIntList2: [5n, 6n]
 }
 ```
+
+## Typescript
+This package was made in Typescript and ships with type declarations.
+

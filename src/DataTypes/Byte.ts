@@ -1,6 +1,6 @@
 // A single signed byte
 import { ENBTTag } from '../enums/ENBTTag'
-import { NBTTag, types } from '../index'
+import { NBTTag, types } from './NBTTag'
 
 export class Byte extends NBTTag<number> {
   public static id = ENBTTag.Byte
