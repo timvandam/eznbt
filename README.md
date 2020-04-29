@@ -15,9 +15,9 @@ For ease of use *lowercase* members of `eznbt` can be used to construct classes 
 ### Writing stuff
 ```javascript
 import NBT from 'eznbt'
-const { NBTString, string } = NBT
+const { NBTString, string, compound } = NBT
 
-const myCompound = NBT.compound({
+const myCompound = compound({
   myStr: NBTString({ value: 'hello' }),
   // is equivalent to
   myStr2: NBT.String({ value: 'hello' }),
