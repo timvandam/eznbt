@@ -61,6 +61,7 @@ const { int, compound } = NBT
 const myCompound = compound({
   myList: [int(5), int(6)], // creates an int-list
   myLong: 5n, // creates a long
+  myStr: 'hello world!', // creates a string
   // creates a compound
   myCompound: {
     myLongList: [5n, 6n, 7n] // creates a long-list
