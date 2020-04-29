@@ -1,4 +1,5 @@
 lib
 src/**/*.js
 src/*.js
-node_modulse
+node_modules
+yarn.lock

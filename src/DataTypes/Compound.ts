@@ -111,6 +111,6 @@ export class Compound extends NBTTag<Record<string, NBTTag<any>>> {
   }
 }
 
-const compound = (value: Record<string, any>): Compound => new Compound({ value })
+export const compound = (value: Record<string, any>): Compound => new Compound({ value })
 
 types.set(Compound.id, Compound)

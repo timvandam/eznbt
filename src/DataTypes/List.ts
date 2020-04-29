@@ -36,9 +36,7 @@ export const List: NBTGenerator = (Type?: NBTTagConstructor): NBTTagConstructor 
     return Buffer.concat([
       Buffer.alloc(1, Type.id), // Type
       int(values.length).buffer, // Length
-      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-      // @ts-ignore
-      ...values.map(value => new Type({ value }).buffer) // Data
+      ...values.map(value => new (Type as NBTTagConstructor)({ value }).buffer) // Data
     ])
   }
 }
