@@ -72,5 +72,5 @@ const myCompound = compound({
 ```
 
 ## Typescript
-This package was made in Typescript and ships with type declarations.
+This package has been made using Typescript and ships with type declarations.
 
