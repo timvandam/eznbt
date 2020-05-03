@@ -10,7 +10,7 @@ and writing. Its constructors accept an object containing either a `value` or `b
 is then constructed. The instance will contain a `value` and `buffer` property.
 
 For ease of use *lowercase* members of `eznbt` can be used to construct classes like this: `int(5)` (instead of
-`Int({ value: 5 })`)
+`new Int({ value: 5 })`)
 
 ### Writing stuff
 ```javascript
@@ -18,9 +18,9 @@ import NBT from 'eznbt'
 const { NBTString, string, compound } = NBT
 
 const myCompound = compound({
-  myStr: NBTString({ value: 'hello' }),
+  myStr: new NBTString({ value: 'hello' }),
   // is equivalent to
-  myStr2: NBT.String({ value: 'hello' }),
+  myStr2: new NBT.String({ value: 'hello' }),
   // is equivalent to
   myStr3: string('hello'),
   // is equivalent to
@@ -36,7 +36,7 @@ import NBT from 'eznbt'
 const { Compound } = NBT
 
 const myBuffer = ... // a buffer you received. it is an nbt compound tag (as always)
-const myCompound = Compound({ buffer: myBuffer })
+const myCompound = new Compound({ buffer: myBuffer })
 myCompound.value // yields the compound as an object. children are NBT Tag instances
 myCompound.json // yields the compound as an object. children are JS types (number, string, bigint, etc.)
 ```
