@@ -11,7 +11,7 @@ interface HasBuffer {
 }
 
 export interface NBTTagConstructor {
-  new ({ value, buffer }: HasValue<any> | HasBuffer): NBTTag<any>;
+  new ({ value, buffer }: HasValue<any> | HasBuffer, ...args: any[]): NBTTag<any>;
   id: ENBTTag;
 }
 

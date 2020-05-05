@@ -15,9 +15,13 @@ For ease of use *lowercase* members of `eznbt` can be used to construct classes 
 ### Writing stuff
 ```javascript
 import NBT from 'eznbt'
-const { NBTString, string, compound } = NBT
+const { NBTString, string, rootcompound } = NBT
 
-const myCompound = compound({
+/* NBT files are usually implicitly in a compound. If this is the case you should use
+ * a named RootCompound. You name it by providing a [Symbol.for('NBTRootTagName')] string.
+ */
+const myCompound = rootcompound({
+  [Symbol.for('NBTRootTagName')]: 'rootTagName',
   myStr: new NBTString({ value: 'hello' }),
   // is equivalent to
   myStr2: new NBT.String({ value: 'hello' }),
@@ -69,6 +73,32 @@ const myCompound = compound({
     myLongList: [5n, 6n, 7n] // creates a long-list
   }
 })
+```
+
+### Compound vs RootCompound
+Since generally all NBT files are implicitly in a compound tag, you should probably always use RootCompound for the
+outside object, and Compound otherwise
+
+```javascript
+// RootCompound.json vs Compound.json
+
+// RootCompound.json will put all values as a property of the root compound's name
+rootcompound({ a: 1, b: 2, [Symbol.for('NBTRootTagName')]: 'hello!' }).json
+/** {
+  *   'hello!': {
+  *     a: 1,
+  *     b: 2
+  *   }
+  * }
+  */
+
+// Compound doesn't have a name so it won't be named
+compound({ a: 1, b: 2 }).json
+/** {
+  *   a: 1,
+  *   b: 2
+  * }
+  */
 ```
 
 ## Typescript

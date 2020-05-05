@@ -7,11 +7,15 @@ import { End } from './End'
 import { list } from './List'
 import { long } from './Long'
 
-export class Compound extends NBTTag<Record<string, NBTTag<any>>> {
+export class Compound extends NBTTag<Record<string|symbol, NBTTag<any>|any>> {
   public static id = ENBTTag.Compound
 
+  get json () {
+    return this.getJson()
+  }
+
   // Returns the value but instead of NBT Types uses JS types
-  get json (): Record<string, any> {
+  getJson (): Record<string, any> {
     const result: Record<string, any> = {}
 
     Object.entries(this.value).forEach(([key, value]) => {
